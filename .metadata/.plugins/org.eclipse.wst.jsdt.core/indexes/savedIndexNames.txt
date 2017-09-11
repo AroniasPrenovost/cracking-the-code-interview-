@@ -1,5 +1,0 @@
-INDEX VERSION 1.4+/Users/aronprenovost/Desktop/cracking_the_code/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-208443677.index
-3196044243.index
-1851811970.index
-748083108.index
