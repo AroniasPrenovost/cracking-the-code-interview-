@@ -56,8 +56,7 @@ var palinPermute = function(str, str2) {
     characterCounts2 += str2.count(str2[j]);
   }
 
-  if (str.length % 2 > 0) {
-    // odd
+  if (str.length % 2 > 0) {     // odd
 
     // if it's a palindrome, middle digit must be only odd count
     var midIndex = (str.length - 1) / 2;
@@ -77,37 +76,23 @@ var palinPermute = function(str, str2) {
     delete characterCounts2[midIndex2];
     characterCounts = characterCounts.join('');
     characterCounts2 = characterCounts2.join('');
-    console.log(characterCounts);
-    console.log(characterCounts2);
 
     // if they contain other odd numbers, they're not a palindrome
     for (var z = 0; z < characterCounts.length; z++) {
-      if (characterCounts[z] % 2 > 0) {
+      if ((characterCounts[z] % 2 > 0) || (characterCounts2[z] % 2 > 0 === true)) {
         return false;
       }
     }
-    for (var a = 0; a < characterCounts2.length; a++) {
-      if (characterCounts2[a] % 2 > 0) {
-        return false;
-      }
-    }
-
     return "It's odd - but it works!";
   } else {
     // an even length will have no odd numbers
     for (var e = 0; e < characterCounts.length; e++) {
-      if (characterCounts[e] % 2 > 0) {
+      if ((characterCounts[e] % 2 > 0 === true) || (characterCounts2[e] % 2 > 0 === true)) {
         return false;
       }
     }
-    for (var v = 0; v < characterCounts2.length; v++) {
-      if (characterCounts2[v] % 2 > 0) {
-        return false;
-      }
-    }
-
     return 'Its even Stephen!';
   }
 };
 
-palinPermute('testtset', 'testtset');
+palinPermute('testotset', 'testotset');
